@@ -3,7 +3,7 @@ import Vector from '@util/Vector';
 import isMobile from '@util/isMobile';
 
 export const CURSOR_RADIUS = 100;
-const ANIMATION_FRAMES = 12.0;
+const ANIMATION_FRAMES = 32.0;
 
 export default class Cursor {
   position: Vector;

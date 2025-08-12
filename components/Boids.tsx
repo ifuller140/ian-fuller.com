@@ -4,7 +4,7 @@ import { MouseMove, Setup, Update, useCanvas } from '@hooks/useCanvas';
 import Boid from '@util/Boid';
 import Cursor from '@util/Cursor';
 
-const NUM_BOIDS = 80;
+const NUM_BOIDS = 120;
 
 const cursor = new Cursor();
 const boids = new Array<Boid>(NUM_BOIDS);
