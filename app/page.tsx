@@ -19,15 +19,16 @@ export default function Home() {
           className="max-w-3xl m-auto flex flex-col gap-8 px-8 pt-14 pb-20"
         >
           <Text>
-            I&apos;m a software engineer, with a love for robotics and hands-on
-            projects! I am in my Senior year at the University of Maryland
-            Pursuing a B.S. in Computer Science and Minor in Robotics and
-            Autonomous Systems.
+            I&apos;m a senior studying <strong>Computer Science</strong> and{' '}
+            <strong>Robotics</strong> at the University of Maryland. I&apos;ve
+            always loved combining software with hands-on engineering, whether
+            it&apos;s designing robotics projects, building interactive systems,
+            or experimenting with new technologies.
           </Text>
           <Text>
-            Check out some of the cool projects I&apos;ve been working on below!
-            If you&apos;ve got any questions or are interested in working with
-            me feel free to <Link href="/#contact">reach out</Link>.
+            Here you&apos;ll find some of the cool projects I&apos;ve been
+            working on. If something sparks your interest, I&apos;d love to{' '}
+            <Link href="/#contact">connect</Link> and talk more!
           </Text>
         </Section>
         <ProjectsSection projects={projects} />
