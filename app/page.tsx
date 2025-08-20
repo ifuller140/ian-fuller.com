@@ -5,7 +5,7 @@ import { Section } from '@components/Section';
 import { Text } from '@components/Text';
 import { getProjectMetadata } from '@util/ProjectMetadata';
 import { GrDocumentUser } from 'react-icons/gr';
-import { HiOutlineMail } from 'react-icons/hi';
+import { HiOutlineMail, HiOutlineUserAdd } from 'react-icons/hi';
 
 export default function Home() {
   const projects = getProjectMetadata();
@@ -42,10 +42,27 @@ export default function Home() {
           </div>
           <Text>
             You can reach out to me with questions, comments, or concerns
-            through email, and I will get back to you as soon as possible.
+            through email, or by connecting with me on LinkedIn, and I will get
+            back to you as soon as possible.
           </Text>
           <div className="max-w-fit m-auto">
             <div className="grid sm:grid-cols-2 gap-8">
+              <Link
+                href="https://www.linkedin.com/in/ian-fuller-9a3932111/"
+                className="text-gray-dark"
+              >
+                <div className="bg-white-light border border-1 border-white-dark h-full max-w-xs md:max-w-sm rounded-xl overflow-hidden shadow-lg transition duration-300 ease-in-out hover:-translate-y-1 hover:shadow-xl">
+                  <div className="flex flex-col p-8 items-center">
+                    <HiOutlineUserAdd className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl" />
+                    <h1 className="font-bold text-lg md:text-xl lg:text-2xl xl:text-3xl">
+                      LinkedIn
+                    </h1>
+                    <p className="text-blue underline text-sm md:text-base lg:text-lg xl:text-xl">
+                      Connect Here
+                    </p>
+                  </div>
+                </div>
+              </Link>
               <Link
                 href="mailto:ianfuller140@gmail.com"
                 className="text-gray-dark"
@@ -58,19 +75,6 @@ export default function Home() {
                     </h1>
                     <p className="text-blue underline text-sm md:text-base lg:text-lg xl:text-xl">
                       ianfuller140@gmail.com
-                    </p>
-                  </div>
-                </div>
-              </Link>
-              <Link href="resume.pdf" className="text-gray-dark">
-                <div className="bg-white-light border border-1 border-white-dark h-full max-w-xs md:max-w-sm rounded-xl overflow-hidden shadow-lg transition duration-300 ease-in-out hover:-translate-y-1 hover:shadow-xl">
-                  <div className="flex flex-col p-8 items-center">
-                    <GrDocumentUser className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl" />
-                    <h1 className="font-bold text-lg md:text-xl lg:text-2xl xl:text-3xl">
-                      Resume
-                    </h1>
-                    <p className="text-blue underline text-sm md:text-base lg:text-lg xl:text-xl">
-                      View PDF
                     </p>
                   </div>
                 </div>
