@@ -42,9 +42,10 @@ export default function Home() {
             </Text>
           </div>
           <Text>
-            You can reach out to me with questions, comments, or concerns
-            through email, or by connecting with me on LinkedIn, and I will get
-            back to you as soon as possible.
+            I&apos;m always excited to connect with fellow students,
+            professionals, and anyone passionate about technology. Whether you
+            have a question about my projects, want to collaborate, or just want
+            to chat about the latest in tech, feel free to reach out!
           </Text>
           <div className="max-w-fit m-auto">
             <div className="grid sm:grid-cols-2 gap-8">
@@ -58,8 +59,8 @@ export default function Home() {
                     <h1 className="font-bold text-lg md:text-xl lg:text-2xl xl:text-3xl">
                       LinkedIn
                     </h1>
-                    <p className="text-blue underline text-sm md:text-base lg:text-lg xl:text-xl">
-                      Connect Here
+                    <p className="text-blue font-bold text-sm md:text-base lg:text-lg xl:text-xl">
+                      Let&apos;s Connect!
                     </p>
                   </div>
                 </div>
@@ -74,7 +75,7 @@ export default function Home() {
                     <h1 className="font-bold text-lg md:text-xl lg:text-2xl xl:text-3xl">
                       Email
                     </h1>
-                    <p className="text-blue underline text-sm md:text-base lg:text-lg xl:text-xl">
+                    <p className="text-blue font-bold text-sm md:text-base lg:text-lg xl:text-xl">
                       ianfuller140@gmail.com
                     </p>
                   </div>
