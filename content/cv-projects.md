@@ -3,7 +3,7 @@ title: 'Computer Vision Projects'
 description: 'Color segmentation, panorama stitching, two-view 3d reconstruction and depth estimation projects'
 image: 'cv-projects/cv-projects.jpg'
 preview: 'cv-projects/preview.gif'
-priority: 4
+priority: 3
 tags:
   - Python
   - OpenCV

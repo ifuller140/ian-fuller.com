@@ -4,7 +4,7 @@ description: 'A 6-DOF robotic arm designed for pick-and-place'
 image: 'robot-arm/robot.jpg'
 preview: 'robot-arm/preview.gif'
 media: 'https://www.youtube.com/embed/yOQUNYTjXFI'
-priority: 7
+priority: 6
 tags:
   - UR3E Robot
   - ROS
