@@ -26,7 +26,7 @@ export default function Card({ project, previewed, onFocusChange }: CardProps) {
   useEffect(() => {
     const timer = setTimeout(
       () => setDebouncedIsVisible(isVisible),
-      isVisible ? 1500 : 0
+      isVisible ? 500 : 0
     );
 
     return () => {
