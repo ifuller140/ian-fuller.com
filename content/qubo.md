@@ -1,6 +1,6 @@
 ---
 title: 'Qubo'
-description: 'An autonomous underwater vehicle'
+description: 'Autonomous underwater vehicle for annual RoboSub Competition'
 image: 'qubo/qubo.jpg'
 preview: 'qubo/preview.gif'
 media: 'https://www.youtube.com/embed/srvkYn-s5TI?si=PAD8qaLIVJfSjBxT&amp;start=4'

@@ -1,5 +1,5 @@
 ---
-title: 'Robotic Arm'
+title: 'Robot Kinematics'
 description: 'A 6-DOF robotic arm designed for pick-and-place'
 image: 'robot-arm/robot.jpg'
 preview: 'robot-arm/preview.gif'
