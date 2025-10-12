@@ -75,6 +75,17 @@ export default function Card({ project, previewed, onFocusChange }: CardProps) {
           ) : (
             <Image src={'/' + project.image} alt={project.title} fill />
           )}
+
+          {/* Subtle hover hint that only shows on desktop when preview exists */}
+          {project.preview && !isMobile() && !previewed && (
+            <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-5 transition-all duration-300 flex items-center justify-center">
+              <div
+                className={`text-white text-sm bg-gray bg-opacity-70 px-3 py-1 rounded-full opacity-0 hover:opacity-100 transition-opacity duration-300`}
+              >
+                Hover to preview
+              </div>
+            </div>
+          )}
         </div>
         <div className="flex flex-col gap-4 p-6">
           <div>
