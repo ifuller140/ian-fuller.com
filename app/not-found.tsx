@@ -8,7 +8,7 @@ export default function NotFound() {
       <p className="text-lg mb-6">
         Oops! The page you’re looking for wandered off.
         <br />
-        Let’s get you back <strong>home</strong>!
+        <strong>Let’s get you back home</strong>!
       </p>
       <Link
         href="/"
