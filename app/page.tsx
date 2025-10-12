@@ -26,7 +26,7 @@ export default function Home() {
             studying <strong>Computer Science</strong> with minors in{' '}
             <strong>Robotics</strong> and <strong>Entrepreneurship</strong>. I
             specialize in building systems that blend intelligent software with
-            physical hardware—whether that&apos;s autonomous robots, computer
+            physical hardware; whether that&apos;s autonomous robots, computer
             vision pipelines, or full-stack applications.
           </Text>
           <Text>
@@ -38,12 +38,12 @@ export default function Home() {
             working, tangible solutions.
           </Text>
           <Text>
-            I&apos;m graduating in <strong>May 2026</strong> and actively
-            seeking full-time opportunities where I can apply my
-            cross-disciplinary skill set. Whether it&apos;s robotics software
-            engineering, full-stack development, or something in between— if
-            you&apos;re building something ambitious, I&apos;d love to{' '}
-            <Link href="/#contact">connect</Link>.
+            I&apos;m graduating in <strong>May 2026</strong> and
+            <strong> actively seeking full-time opportunities</strong> where I
+            can apply my cross-disciplinary skill set. Whether it&apos;s
+            robotics software engineering, full-stack development, or something
+            in between; if you&apos;re building something ambitious, I&apos;d
+            love to <Link href="/#contact">connect</Link>.
           </Text>
         </Section>
 
