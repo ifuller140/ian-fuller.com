@@ -19,16 +19,21 @@ export default function Home() {
           className="max-w-3xl m-auto flex flex-col gap-8 px-8 pt-14 pb-20"
         >
           <Text>
-            I&apos;m a senior studying <strong>Computer Science</strong> and{' '}
-            <strong>Robotics</strong> at the University of Maryland. I&apos;ve
-            always loved combining software with hands-on engineering, whether
-            it&apos;s designing robotics projects, building interactive systems,
-            or experimenting with new technologies.
+            I&apos;m a Computer Science and Robotics student at the University
+            of Maryland graduating in May 2026. I specialize in autonomous
+            systems and computer vision, bringing software and hardware together
+            to solve complex problems.
           </Text>
           <Text>
-            Here you&apos;ll find some of the cool projects I&apos;ve been
-            working on. If something sparks your interest, I&apos;d love to{' '}
-            <Link href="/#contact">connect</Link> and talk more!
+            My work spans robotic manipulation, real-time vision processing, and
+            embedded systems. I'm currently seeking full-time robotics and
+            software engineering roles where I can apply my skills to build
+            intelligent systems.
+          </Text>
+          <Text>
+            Below are some projects that showcase my approach to both software
+            and hardware challenges. Let's <Link href="/#contact">connect</Link>{' '}
+            if you're building something ambitious.
           </Text>
         </Section>
         <ProjectsSection projects={projects} />
