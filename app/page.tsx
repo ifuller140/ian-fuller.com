@@ -1,6 +1,8 @@
 import Hero from '@components/Hero';
 import { Link } from '@components/Link';
 import ProjectsSection from '@components/ProjectsSection';
+import SkillsSection from '@components/SkillsSection';
+import FeaturedProject from '@components/FeaturedProject';
 import { Section } from '@components/Section';
 import { Text } from '@components/Text';
 import { getProjectMetadata } from '@util/ProjectMetadata';
@@ -9,6 +11,7 @@ import { HiOutlineMail, HiOutlineUserAdd } from 'react-icons/hi';
 
 export default function Home() {
   const projects = getProjectMetadata();
+  const featuredProject = projects[0];
 
   return (
     <>
@@ -19,23 +22,42 @@ export default function Home() {
           className="max-w-3xl m-auto flex flex-col gap-8 px-8 pt-14 pb-20"
         >
           <Text>
-            I&apos;m a Computer Science and Robotics student at the University
-            of Maryland graduating in May 2026. I specialize in autonomous
-            systems and computer vision, bringing software and hardware together
-            to solve complex problems.
+            I&apos;m a senior at the <strong>University of Maryland</strong>{' '}
+            studying <strong>Computer Science</strong> with minors in{' '}
+            <strong>Robotics</strong> and <strong>Entrepreneurship</strong>. I
+            specialize in building systems that blend intelligent software with
+            physical hardware—whether that&apos;s autonomous robots, computer
+            vision pipelines, or full-stack applications.
           </Text>
           <Text>
-            My work spans robotic manipulation, real-time vision processing, and
-            embedded systems. I'm currently seeking full-time robotics and
-            software engineering roles where I can apply my skills to build
-            intelligent systems.
+            My work spans embedded systems, mobile development, simulation, and
+            reinforcement learning. I&apos;ve built everything from{' '}
+            <Link href="/project/smart-chess-board">chess-playing robots</Link>{' '}
+            to document management systems used by real businesses. What excites
+            me most is taking complex technical challenges and turning them into
+            working, tangible solutions.
           </Text>
           <Text>
-            Below are some projects that showcase my approach to both software
-            and hardware challenges. Let's <Link href="/#contact">connect</Link>{' '}
-            if you're building something ambitious.
+            I&apos;m graduating in <strong>May 2026</strong> and actively
+            seeking full-time opportunities where I can apply my
+            cross-disciplinary skill set. Whether it&apos;s robotics software
+            engineering, full-stack development, or something in between— if
+            you&apos;re building something ambitious, I&apos;d love to{' '}
+            <Link href="/#contact">connect</Link>.
           </Text>
         </Section>
+
+        <SkillsSection />
+
+        <Section className="bg-white px-8 py-16 md:py-24">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="font-extrabold text-2xl sm:text-3xl md:text-4xl text-center mb-12">
+              Featured Project
+            </h2>
+            <FeaturedProject project={featuredProject} />
+          </div>
+        </Section>
+
         <ProjectsSection projects={projects} />
         <Section
           id="contact"
@@ -47,15 +69,18 @@ export default function Home() {
             </Text>
           </div>
           <Text>
-            I&apos;m always excited to connect with fellow students,
-            professionals, and anyone passionate about technology. Whether you
-            have a question about my projects, want to collaborate, or just want
-            to chat about the latest in tech, feel free to reach out!
+            I&apos;m actively seeking{' '}
+            <strong>full-time software engineering and robotics roles</strong>{' '}
+            starting May 2026. Whether you&apos;re hiring, have an interesting
+            project collaboration in mind, or just want to discuss autonomous
+            systems, computer vision, or software development, I&apos;d love to
+            hear from you!
           </Text>
           <div className="max-w-fit m-auto">
             <div className="grid sm:grid-cols-2 gap-8">
               <Link
                 href="https://www.linkedin.com/in/ian-fuller-9a3932111/"
+                target="_blank"
                 className="text-gray-dark"
               >
                 <div className="bg-white-light border border-1 border-white-dark h-full max-w-xs md:max-w-sm rounded-xl overflow-hidden shadow-lg transition duration-300 ease-in-out hover:-translate-y-1 hover:shadow-xl">
