@@ -2,7 +2,7 @@
 title: 'Qubo'
 description: 'Autonomous underwater vehicle for annual RoboSub Competition'
 image: 'qubo/qubo.jpg'
-preview: 'qubo/preview.gif'
+preview: 'qubo/preview2.mp4'
 media: 'https://www.youtube.com/embed/srvkYn-s5TI?si=PAD8qaLIVJfSjBxT&amp;start=4'
 priority: 1
 tags:
