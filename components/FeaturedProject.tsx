@@ -17,21 +17,14 @@ export default function FeaturedProject({ project }: FeaturedProjectProps) {
             className="relative aspect-video md:aspect-auto md:min-h-[400px]"
             style={{ backgroundColor: project.bgColor || '#F5F5F5' }}
           >
-            {project.preview ? (
-              <Image
-                src={'/' + project.preview}
-                alt={project.title}
-                fill
-                className="object-contain"
-              />
-            ) : (
+            {
               <Image
                 src={'/' + project.image}
                 alt={project.title}
                 fill
                 className="object-cover"
               />
-            )}
+            }
           </div>
 
           {/* Content Section */}

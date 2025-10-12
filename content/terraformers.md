@@ -2,7 +2,7 @@
 title: 'Terraformers'
 description: 'Mars rover for competition in annual University Rover Challenge'
 image: 'terraformers/terraformers.jpg'
-preview: 'terraformers/preview.gif'
+preview: 'terraformers/preview.mp4'
 media: 'https://www.youtube.com/embed/w50tzLyhFUw?si=VD4bZxoAxfcRkvur&amp;controls=0'
 priority: 4
 tags:
