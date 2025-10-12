@@ -1,5 +1,6 @@
 import Footer from '@components/Footer';
 import NavBar from '@components/Navbar';
+import StickyContactButton from '@components/StickyContactButton';
 import '@styles/globals.css';
 
 export const metadata = {
@@ -17,6 +18,7 @@ export default function RootLayout({
       <body className="min-h-screen bg-white text-gray-dark flex flex-col">
         <NavBar />
         {children}
+        <StickyContactButton />
         <Footer />
       </body>
     </html>
