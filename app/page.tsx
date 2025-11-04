@@ -11,7 +11,7 @@ import { HiOutlineMail, HiOutlineUserAdd } from 'react-icons/hi';
 
 export default function Home() {
   const projects = getProjectMetadata();
-  const featuredProject = projects[9];
+  const featuredProject = projects[1];
 
   return (
     <>
