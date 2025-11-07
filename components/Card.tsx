@@ -17,10 +17,39 @@ export interface CardProps {
 export default function Card({ project, previewed, onFocusChange }: CardProps) {
   const [focused, setFocused] = useState(false);
   const [hovered, setHovered] = useState(false);
+  const [previewLoaded, setPreviewLoaded] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
   const ref = useRef<HTMLDivElement | null>(null);
   const entry = useIntersectionObserver(ref, { threshold: 1 });
   const isVisible = !!entry?.isIntersecting;
   const [debouncedIsVisible, setDebouncedIsVisible] = useState(isVisible);
+
+  // Check if preview is a video
+  const isVideoPreview =
+    project.preview?.endsWith('.mp4') || project.preview?.endsWith('.webm');
+
+  // Preload the preview GIF when card becomes visible
+  useEffect(() => {
+    if (project.preview && isVisible && !previewLoaded && !isVideoPreview) {
+      const img = new window.Image();
+      img.src = '/' + project.preview;
+      img.onload = () => setPreviewLoaded(true);
+    }
+  }, [project.preview, isVisible, previewLoaded, isVideoPreview]);
+
+  // Handle video playback
+  useEffect(() => {
+    if (videoRef.current && isVideoPreview) {
+      if (previewed) {
+        videoRef.current.play().catch(() => {
+          // Autoplay failed (browser policy), this is okay
+        });
+      } else {
+        videoRef.current.pause();
+        videoRef.current.currentTime = 0;
+      }
+    }
+  }, [previewed, isVideoPreview]);
 
   // Debounce is visible if changing from not visible to visible
   useEffect(() => {
@@ -66,14 +95,55 @@ export default function Card({ project, previewed, onFocusChange }: CardProps) {
           style={{ backgroundColor: project.bgColor }}
         >
           {project.preview && previewed ? (
+            isVideoPreview ? (
+              <video
+                ref={videoRef}
+                src={'/' + project.preview}
+                className="w-full h-full object-contain"
+                loop
+                muted
+                playsInline
+                preload="auto"
+              />
+            ) : previewLoaded ? (
+              <Image
+                src={'/' + project.preview}
+                alt={project.title}
+                fill
+                className="object-contain"
+              />
+            ) : (
+              <>
+                <Image
+                  src={'/' + project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover"
+                />
+                {/* Loading indicator */}
+                <div className="absolute inset-5 flex items-center justify-center bg-black bg-opacity-20">
+                  <div className="animate-spin rounded-full h-20 w-20 border-b-2 border-gray"></div>
+                </div>
+              </>
+            )
+          ) : (
             <Image
-              src={'/' + project.preview}
+              src={'/' + project.image}
               alt={project.title}
               fill
-              className="object-contain"
+              className="object-cover"
             />
-          ) : (
-            <Image src={'/' + project.image} alt={project.title} fill />
+          )}
+
+          {/* Subtle hover hint that only shows on desktop when preview exists */}
+          {project.preview && !isMobile() && !previewed && (
+            <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-5 transition-all duration-300 flex items-center justify-center">
+              <div
+                className={`text-white text-sm bg-gray bg-opacity-70 px-3 py-1 rounded-full opacity-0 hover:opacity-100 transition-opacity duration-300`}
+              >
+                Hover to preview
+              </div>
+            </div>
           )}
         </div>
         <div className="flex flex-col gap-4 p-6">

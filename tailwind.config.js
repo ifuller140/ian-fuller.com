@@ -23,7 +23,11 @@ module.exports = {
         DEFAULT: '#3ACF38',
         dark: '#32C530',
       },
-      blue: '#379DC2',
+      blue:{
+        DEFAULT: '#379DC2',
+        dark: '#2E8AA8',
+
+      },
       transparent: 'transparent',
     },
     extend: {

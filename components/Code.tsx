@@ -34,7 +34,6 @@ const Code: React.FC<CodeProps> = ({ language, text }) => {
         text={processedText}
         language={language}
         showLineNumbers={false}
-        codeBlock
         theme={monokai}
         customStyle={copyBlockStyle}
         codeContainerStyle={containerStyle}
