@@ -3,7 +3,7 @@ title: 'Smart Chess Board'
 description: 'An autonomous chess board that plays against humans'
 image: 'smart-chess-board/smart-chess-board.jpg'
 preview: 'smart-chess-board/preview.gif'
-priority: 9
+priority: 5
 tags:
   - ROS
   - Python

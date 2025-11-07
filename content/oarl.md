@@ -3,7 +3,7 @@ title: 'Omni-domain AI and Robotics Lab'
 description: 'Hybrid soft-rigid body simulation for bio-inspired robotics'
 image: 'oarl/oarl.jpg'
 preview: 'oarl/preview.mp4'
-priority: 9
+priority: 7
 tags:
   - Research
   - Reinforcement Learning

@@ -2,7 +2,7 @@
 title: 'Qubo - Autonomous Underwater Vehicle'
 description: 'Competition AUV for RoboSub with ML-enhanced stereo vision system'
 image: 'qubo/qubo.jpg'
-preview: 'qubo/nbrf_testing.mp4'
+preview: 'qubo/deep-pool-testing.mp4'
 media: 'https://www.youtube.com/embed/srvkYn-s5TI?si=PAD8qaLIVJfSjBxT&amp;start=4'
 priority: 10
 tags:

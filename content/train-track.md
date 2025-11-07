@@ -3,7 +3,7 @@ title: 'Live Train Tracking and Booking Website'
 description: 'Full-stack web application for Amtrak train booking and management'
 image: 'train-track/train-track.jpg'
 preview: 'train-track/preview.gif'
-priority: 5
+priority: 4
 tags:
   - JavaScript
   - HTML/CSS

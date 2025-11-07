@@ -2,7 +2,7 @@
 title: 'Robot Kinematics & Manipulation'
 description: '6-DOF robotic arm pick-and-place with computer vision'
 image: 'robot-arm/robot.jpg'
-preview: 'robot-arm/preview.gif'
+preview: 'robot-arm/preview.mp4'
 media: 'https://www.youtube.com/embed/yOQUNYTjXFI'
 priority: 6
 tags:

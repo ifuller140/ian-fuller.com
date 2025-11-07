@@ -2,8 +2,8 @@
 title: 'Autonomous Fire Truck'
 description: 'Fully autonomous robot for candle extinguishing and terrain navigation'
 image: 'fire-truck/fire-truck.jpg'
-preview: 'fire-truck/preview.gif'
-priority: 2
+preview: 'fire-truck/preview.mp4'
+priority: 9
 media: 'https://www.youtube.com/embed/XeLIS-Nzu3Y'
 tags:
   - Arduino
