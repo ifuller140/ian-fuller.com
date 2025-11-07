@@ -64,23 +64,24 @@ export default function Card({ project, previewed, onFocusChange }: CardProps) {
   }, [isVisible]);
 
   useEffect(() => {
-    // If no preview, don't focus
     if (!project.preview) {
       setFocused(false);
+      return;
     }
-    // If on mobile, focus if fully visible
-    else if (isMobile()) {
-      setFocused(debouncedIsVisible);
+
+    if (typeof window !== 'undefined') {
+      const mobile = isMobile();
+      if (mobile) {
+        setFocused(debouncedIsVisible);
+      } else {
+        setFocused(hovered);
+      }
     }
-    // Otherwise, focus if hovered
-    else {
-      setFocused(hovered);
-    }
-  }, [project, hovered, debouncedIsVisible, isMobile]);
+  }, [project.preview, hovered, debouncedIsVisible]);
 
   useEffect(() => {
     onFocusChange(focused, project.id);
-  }, [focused]);
+  }, [focused, onFocusChange, project.id]);
 
   return (
     <Link href={'/project/' + project.id}>
