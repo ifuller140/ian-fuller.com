@@ -1,4 +1,6 @@
 const isMobile = () => {
+  if (typeof navigator === 'undefined') return false; // <-- prevents SSR crash
+
   const toMatch = [
     /Android/i,
     /webOS/i,
@@ -9,9 +11,7 @@ const isMobile = () => {
     /Windows Phone/i,
   ];
 
-  return toMatch.some((toMatchItem) => {
-    return navigator.userAgent.match(toMatchItem);
-  });
+  return toMatch.some((toMatchItem) => navigator.userAgent.match(toMatchItem));
 };
 
 export default isMobile;
