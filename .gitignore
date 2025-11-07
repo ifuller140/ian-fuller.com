@@ -34,9 +34,3 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-
-# large files
-public/qubo/*.mp4
-public/qubo/*.gif
-public/qubo/manual.pdf
-public/terraformers/*.gif
