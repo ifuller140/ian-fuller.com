@@ -2,7 +2,7 @@ import NavButton from '@components/NavButton';
 
 export default function NavBar() {
   return (
-    <nav className="bg-gray-dark">
+    <nav className="bg-gray-dark/90 backdrop-blur-sm sticky top-0 z-50 shadow-md">
       <div className="max-w-screen-xl flex flex-wrap mx-auto p-4 items-center justify-center flex-col sm:justify-between sm:flex-row">
         <NavButton text="Ian Fuller" href="/" isHome />
         <ul className="font-medium flex p-0 rounded-lg flex-row space-x-8">
