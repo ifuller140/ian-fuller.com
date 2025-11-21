@@ -84,16 +84,25 @@ export default function Card({ project, previewed, onFocusChange }: CardProps) {
           className="relative aspect-5/4"
           style={{ backgroundColor: project.bgColor }}
         >
-          {project.preview && previewed ? (
-            <video
-              ref={videoRef}
-              src={'/' + project.preview}
-              className="w-full h-full object-contain"
-              loop
-              muted
-              playsInline
-              preload="auto"
-            />
+          {isVideoPreview ? (
+            <>
+              <video
+                ref={videoRef}
+                src={'/' + project.preview}
+                className={`w-full h-full object-contain absolute top-0 left-0 transition-opacity duration-300 ${previewed ? 'opacity-100' : 'opacity-0'
+                  }`}
+                loop
+                muted
+                playsInline
+                preload="auto"
+              />
+              <div
+                className={`relative w-full h-full transition-opacity duration-300 ${previewed ? 'opacity-0' : 'opacity-100'
+                  }`}
+              >
+                <Image src={'/' + project.image} alt={project.title} fill />
+              </div>
+            </>
           ) : (
             <Image src={'/' + project.image} alt={project.title} fill />
           )}

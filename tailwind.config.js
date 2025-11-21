@@ -23,7 +23,7 @@ module.exports = {
         DEFAULT: '#3ACF38',
         dark: '#32C530',
       },
-      blue:{
+      blue: {
         DEFAULT: '#379DC2',
         dark: '#2E8AA8',
 
@@ -33,6 +33,15 @@ module.exports = {
     extend: {
       aspectRatio: {
         '5/4': '5 / 4',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+      },
+      animation: {
+        fadeIn: 'fadeIn 0.5s ease-in-out',
       },
     },
   },
