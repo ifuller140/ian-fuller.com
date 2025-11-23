@@ -42,13 +42,13 @@ export default function Hero() {
         <div className="absolute w-full h-[75px] flex flex-col">
           <div className="max-w-3xl mx-auto px-8 w-full h-full flex items-end gap-2 xs:gap-4 sm:gap-6 invisible min-[300px]:visible">
             <Link href="https://github.com/ifuller140">
-              <FaGithub className="text-gray-dark text-4xl min-[400px]:text-5xl sm:text-6xl transition duration-300 ease-int-out hover:-translate-y-1 hover:text-black" />
+              <FaGithub className="text-gray text-4xl min-[400px]:text-5xl sm:text-6xl transition duration-300 ease-int-out hover:-translate-y-1 hover:text-gray-dark" />
             </Link>
             <Link href="https://www.linkedin.com/in/ian-fuller-9a3932111/">
-              <FaLinkedin className="text-gray-dark text-4xl min-[400px]:text-5xl sm:text-6xl transition duration-300 ease-int-out hover:-translate-y-1 hover:text-black" />
+              <FaLinkedin className="text-gray text-4xl min-[400px]:text-5xl sm:text-6xl transition duration-300 ease-int-out hover:-translate-y-1 hover:text-gray-dark" />
             </Link>
             <Link href="mailto:ianfuller140@gmail.com">
-              <HiMail className="text-gray-dark text-4xl min-[400px]:text-5xl sm:text-6xl transition duration-300 ease-int-out hover:-translate-y-1 hover:text-black" />
+              <HiMail className="text-gray text-4xl min-[400px]:text-5xl sm:text-6xl transition duration-300 ease-int-out hover:-translate-y-1 hover:text-gray-dark" />
             </Link>
           </div>
         </div>
