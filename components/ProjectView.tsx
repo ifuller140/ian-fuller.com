@@ -120,6 +120,19 @@ export default function ProjectView({ project }: ProjectViewProps) {
                             },
                         })}
                     </article>
+
+                    {/* View Technical Details Button */}
+                    <div className="flex justify-center mt-4">
+                        <button
+                            className="bg-red hover:bg-red/80 text-white font-bold rounded-full px-4 py-2 text-lg md:text-xl transition-all duration-300 flex items-center gap-2 hover:gap-3"
+                            onClick={() => {
+                                setActiveTab('technical');
+                                window.scrollTo({ top: 0, behavior: 'smooth' });
+                            }}
+                        >
+                            View Technical Details &rarr;
+                        </button>
+                    </div>
                 </div>
             ) : (
                 <div className="flex flex-col lg:flex-row gap-8 animate-fadeIn duration-500 relative">
