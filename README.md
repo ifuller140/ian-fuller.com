@@ -3,7 +3,7 @@
 
 # [ian-fuller.com](https://ian-fuller.com)
 
-My personal portfolio website showcasing projects in robotics, computer vision, and software engineering. Built with Next.js 13+, TypeScript, and Tailwind CSS.
+My personal portfolio website showcasing projects in robotics, computer vision, and software engineering. Built with Next.js 14+, TypeScript, and Tailwind CSS.
 
 ## About
 
@@ -25,7 +25,7 @@ The site features an interactive boids simulation on the hero section, dynamic p
 
 ## Installation
 
-This project requires [Node.js](https://nodejs.org) (v18+) and npm.
+This project requires [Node.js](https://nodejs.org) (v20+) and npm.
 
 ```bash
 # Clone the repository
