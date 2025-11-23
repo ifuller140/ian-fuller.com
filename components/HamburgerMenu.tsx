@@ -3,9 +3,16 @@
 import { useState } from 'react';
 import { HiMenu, HiX } from 'react-icons/hi';
 import { Link } from '@components/Link';
+import { usePathname } from 'next/navigation';
 
 export default function HamburgerMenu() {
     const [isOpen, setIsOpen] = useState(false);
+    const pathname = usePathname();
+
+    // Only show on home page
+    if (pathname !== '/') {
+        return null;
+    }
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
