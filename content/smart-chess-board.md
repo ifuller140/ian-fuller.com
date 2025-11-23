@@ -184,8 +184,7 @@ This approach is **much more robust** than trying to do shape-based piece recogn
 
 ## Motion Control System
 
-### Current Status
-
+### Current Project Status
 The gantry is **mechanically complete and motors are functional**. I can send commands to move the X and Y axes. However, the integrated control system (path planning, collision avoidance, coordinated motion) is still being developed.
 
 ### Planned Motion Planning
