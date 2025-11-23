@@ -9,19 +9,37 @@ export default function StickyContactButton() {
   useEffect(() => {
     const toggleVisibility = () => {
       // Show button after scrolling down 300px
-      if (
-        window.pageYOffset > 300 &&
-        window.pageYOffset < (window.innerWidth < 600 ? 7000 : 5000)
-      ) {
+      if (window.scrollY > 300) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
       }
     };
 
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(false);
+          } else if (window.scrollY > 300) {
+            setIsVisible(true);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      observer.observe(contactSection);
+    }
+
     window.addEventListener('scroll', toggleVisibility);
 
-    return () => window.removeEventListener('scroll', toggleVisibility);
+    return () => {
+      window.removeEventListener('scroll', toggleVisibility);
+      observer.disconnect();
+    };
   }, []);
 
   return (

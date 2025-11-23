@@ -2,6 +2,7 @@ import Footer from '@components/Footer';
 import NavBar from '@components/Navbar';
 import StickyContactButton from '@components/StickyContactButton';
 import GoogleAnalytics from '@components/GoogleAnalytics';
+import HamburgerMenu from '@components/HamburgerMenu';
 import '@styles/globals.css';
 
 export const metadata = {
@@ -25,6 +26,7 @@ export default function RootLayout({
         )}
 
         <NavBar />
+        <HamburgerMenu />
         {children}
         <StickyContactButton />
         <Footer />

@@ -29,6 +29,8 @@ _Current hardware assembly with CoreXY gantry and electronics_
 
 ---
 
+<!-- split -->
+
 ## Design Goals
 
 This isn't just about moving chess pieces, it's about creating an **authentic chess-playing experience** against a computer opponent that feels like playing against another person. The board maintains the tactile, focused nature of traditional chess while incorporating autonomous capabilities.

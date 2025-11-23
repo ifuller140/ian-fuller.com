@@ -24,6 +24,8 @@ _Final autonomous fire truck with extended suppression platform_
 
 ---
 
+<!-- split -->
+
 ## Mission Objectives
 
 The robot must autonomously:

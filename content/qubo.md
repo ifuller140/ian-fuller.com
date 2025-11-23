@@ -14,6 +14,13 @@ tags:
   - Team Project
 ---
 
+## Meet Qubo!
+
+![Qubo at Competition](/qubo/qubo.jpg)
+_Qubo: University of Maryland's competition AUV_
+
+Qubo is Robotics @ Maryland's flagship autonomous underwater vehicle, purpose-built for the demands of international RoboSub competition. Representing years of iterative design and engineering across mechanical, electrical, and software disciplines, Qubo embodies the team's commitment to pushing the boundaries of underwater autonomy.
+
 ## Competition Overview
 
 **[RoboSub](https://robonation.org/programs/robosub/)** is an international autonomous underwater vehicle competition where teams design, build, and program robots to complete underwater tasks without human intervention. As a member of **Robotics @ Maryland** from 2022-2024, I served as **Perception Lead** on the software team, developing and overseeing the computer vision pipeline that enables our UAV, Qubo, to detect, classify, and localize competition elements.
@@ -36,6 +43,8 @@ _Qubo operating in the competition pool during RoboSub 2024_
 
 ---
 
+<!-- split -->
+
 ## Mission Challenges
 
 The competition course simulates real-world underwater scenarios with tasks including:
@@ -55,8 +64,6 @@ Each task requires **real-time computer vision, sensor fusion localization, and 
 
 ![Qubo at Competition](/qubo/qubo.jpg)
 _Qubo: University of Maryland's competition AUV_
-
-Qubo is Robotics @ Maryland's flagship autonomous underwater vehicle, purpose-built for the demands of international RoboSub competition. Representing years of iterative design and engineering across mechanical, electrical, and software disciplines, Qubo embodies the team's commitment to pushing the boundaries of underwater autonomy.
 
 **Design Philosophy**: The robot's architecture prioritizes modularity, reliability, and maintainability. A custom aluminum chassis houses waterproof electronics enclosures, pneumatic actuation systems, and an 8-thruster vectored propulsion system capable of full 6-degree-of-freedom motion. Every subsystem, from the custom backplane electrical architecture to the triple-camera perception suite, is designed for rapid iteration and robust performance in the challenging underwater environment.
 

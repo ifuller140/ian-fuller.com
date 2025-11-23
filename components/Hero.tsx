@@ -9,7 +9,7 @@ export default function Hero() {
     <div className="relative overflow-hidden select-none">
       <div className="touch-none">
         <Boids />
-        <section className="width-screen min-h-[65vh] bg-gray flex flex-col justify-center items-center">
+        <section className="width-screen min-h-[50vh] md:min-h-[65vh] bg-gray flex flex-col justify-center items-center">
           <div className="flex justify-center items-center gap-4 py-8 sm:gap-8 md:gap-10 lg:gap-12 xl:gap-16 relative z-10 pointer-events-none">
             <div className="flex flex-col gap-1">
               <h1 className="text-white font-bold leading-none text-[10vw] xl:text-9xl">
@@ -42,13 +42,13 @@ export default function Hero() {
         <div className="absolute w-full h-[75px] flex flex-col">
           <div className="max-w-3xl mx-auto px-8 w-full h-full flex items-end gap-2 xs:gap-4 sm:gap-6 invisible min-[300px]:visible">
             <Link href="https://github.com/ifuller140">
-              <FaGithub className="text-gray-light text-3xl min-[400px]:text-4xl sm:text-5xl transition duration-300 ease-int-out hover:-translate-y-1 hover:text-gray" />
+              <FaGithub className="text-gray text-4xl min-[400px]:text-5xl sm:text-6xl transition duration-300 ease-int-out hover:-translate-y-1 hover:text-gray-dark" />
             </Link>
             <Link href="https://www.linkedin.com/in/ian-fuller-9a3932111/">
-              <FaLinkedin className="text-gray-light text-3xl min-[400px]:text-4xl sm:text-5xl transition duration-300 ease-int-out hover:-translate-y-1 hover:text-gray" />
+              <FaLinkedin className="text-gray text-4xl min-[400px]:text-5xl sm:text-6xl transition duration-300 ease-int-out hover:-translate-y-1 hover:text-gray-dark" />
             </Link>
             <Link href="mailto:ianfuller140@gmail.com">
-              <HiMail className="text-gray-light text-3xl min-[400px]:text-4xl sm:text-5xl transition duration-300 ease-int-out hover:-translate-y-1 hover:text-gray" />
+              <HiMail className="text-gray text-4xl min-[400px]:text-5xl sm:text-6xl transition duration-300 ease-int-out hover:-translate-y-1 hover:text-gray-dark" />
             </Link>
           </div>
         </div>

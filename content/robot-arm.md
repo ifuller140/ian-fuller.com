@@ -34,6 +34,8 @@ _UR3e collaborative robot with overhead camera system_
 
 ---
 
+<!-- split -->
+
 ## System Architecture
 
 ### Hardware Components

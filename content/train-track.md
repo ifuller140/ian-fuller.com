@@ -25,6 +25,8 @@ _Main application interface showing live train status_
 
 ---
 
+<!-- split -->
+
 ## Core Functionality
 
 ### 1. Live Train Tracking
