@@ -27,14 +27,15 @@ interface ProjectViewProps {
 export default function ProjectView({ project }: ProjectViewProps) {
     const [activeTab, setActiveTab] = useState<'overview' | 'technical'>('overview');
 
-    // Split content based on "## Design Goals"
-    const splitIndex = project.content.indexOf('## Technical Details');
+    // Split content based on "<!-- split -->" delimiter
+    const splitDelimiter = '<!-- split -->';
+    const splitIndex = project.content.indexOf(splitDelimiter);
     let overviewContent = '';
     let technicalContent = '';
 
     if (splitIndex !== -1) {
         overviewContent = project.content.substring(0, splitIndex);
-        technicalContent = project.content.substring(splitIndex);
+        technicalContent = project.content.substring(splitIndex + splitDelimiter.length);
     } else {
         // Fallback: everything in overview if split point not found
         overviewContent = project.content;
@@ -84,8 +85,6 @@ export default function ProjectView({ project }: ProjectViewProps) {
                 </button>
             </div>
 
-
-
             {/* Content */}
             {activeTab === 'overview' ? (
                 <div className="max-w-3xl mx-auto w-full flex flex-col gap-8 animate-fadeIn duration-500">
@@ -118,11 +117,6 @@ export default function ProjectView({ project }: ProjectViewProps) {
                             overrides: {
                                 a: { component: Link },
                                 pre: { component: CodeWrapper },
-                                code: {
-                                    component: (props) => (
-                                        <Code language="python" text={props.children} />
-                                    ),
-                                },
                             },
                         })}
                     </article>
@@ -140,11 +134,6 @@ export default function ProjectView({ project }: ProjectViewProps) {
                             overrides: {
                                 a: { component: Link },
                                 pre: { component: CodeWrapper },
-                                code: {
-                                    component: (props) => (
-                                        <Code language="python" text={props.children} />
-                                    ),
-                                },
                                 h1: { component: (props) => <HeadingRenderer level={1} {...props} /> },
                                 h2: { component: (props) => <HeadingRenderer level={2} {...props} /> },
                                 h3: { component: (props) => <HeadingRenderer level={3} {...props} /> },
