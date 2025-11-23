@@ -25,6 +25,8 @@ _Overview of the four computer vision domains explored_
 
 ---
 
+<!-- split -->
+
 ## Project 1: Color Segmentation using Gaussian Mixture Models
 
 ### Problem Statement

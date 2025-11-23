@@ -28,6 +28,7 @@ As a member of **Robotics @ Maryland's Terraformers team**, I served as **Manufa
 _Terraformers rover during field testing in Maryland_
 
 ---
+<!-- split -->
 
 ## My Role: Design for Manufacturing (DFM)
 
