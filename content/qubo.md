@@ -118,7 +118,7 @@ This configuration provides both long-range target detection and close-range man
 
 **2. Hybrid ML + Classical CV Pipeline**
 
-Rather than relying solely on traditional color-based detection (which proved unreliable underwater), I architected a hybrid approach:
+Rather than relying solely on traditional color-based detection (which proved unreliable underwater), I developed a hybrid approach:
 
 - **YOLO object detection**: Fine-tuned models for RoboSub-specific objects (gates, buoys, bins, torpedoes)
 - **OpenCV refinement**: Traditional CV methods to extract precise geometric features from YOLO regions
@@ -149,7 +149,7 @@ className="rounded-lg shadow-lg"
   <source src="/qubo/object-tracking.mp4" type="video/mp4" />
   Your browser does not support the video tag.
 </video>
-_Successful tracking of gates, targets and boueys_
+_Successful tracking of gates, targets and buoys_
 
 ---
 

@@ -41,7 +41,7 @@ export default function Home() {
             I&apos;m graduating in <strong>May 2026</strong> and
             <strong> actively seeking full-time opportunities</strong> where I
             can apply my cross-disciplinary skill set. Whether it&apos;s
-            robotics software engineering, full-stack development, or something
+            robotics, software engineering, full-stack development, or something
             in between; if you&apos;re building something ambitious, I&apos;d
             love to <Link href="/#contact">connect</Link>.
           </Text>

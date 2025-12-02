@@ -117,6 +117,7 @@ export default function ProjectView({ project }: ProjectViewProps) {
                             overrides: {
                                 a: { component: Link },
                                 pre: { component: CodeWrapper },
+                                video: { component: (props) => <video playsInline {...props} /> },
                             },
                         })}
                     </article>
@@ -150,6 +151,7 @@ export default function ProjectView({ project }: ProjectViewProps) {
                                 h1: { component: (props) => <HeadingRenderer level={1} {...props} /> },
                                 h2: { component: (props) => <HeadingRenderer level={2} {...props} /> },
                                 h3: { component: (props) => <HeadingRenderer level={3} {...props} /> },
+                                video: { component: (props) => <video playsInline {...props} /> },
                             },
                         })}
                     </article>
