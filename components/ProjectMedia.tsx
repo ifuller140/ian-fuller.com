@@ -25,7 +25,7 @@ export default function ProjectMedia({
     );
   } else if (isMp4) {
     return (
-      <video className="w-full bg-gray" width="854" height="480" controls>
+      <video className="w-full bg-gray" width="854" height="480" controls playsInline>
         <source src={`/${media}`} type="video/mp4" />
       </video>
     );
