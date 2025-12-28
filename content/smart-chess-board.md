@@ -1,7 +1,7 @@
 ---
 title: 'Smart Chess Board'
 description: 'Robot for human vs. computer chess matches'
-image: 'smart-chess-board/smart-chess-board.jpg'
+image: 'smart-chess-board/full-view.jpg'
 preview: 'smart-chess-board/preview.mp4'
 priority: 5
 tags:
@@ -18,9 +18,9 @@ links:
 
 ## Project Overview
 
-I'm building an autonomous chess board that physically moves pieces to play against a human opponent. no screens, no manual input, just a traditional chess experience where the computer moves its own pieces. This ongoing project combines **computer vision**, **robotics control**, **embedded systems**, and **mechanical design** into one integrated system.
+I'm building an autonomous chess board that physically moves pieces to play against a human opponent. no screens, no manual input, just a traditional chess experience but playing against a computer. This ongoing project combines **computer vision**, **robotics control**, **embedded systems**, and **mechanical design** into one integrated system.
 
-The board uses a **Raspberry Pi** for processing, an **overhead camera** for board state detection, a **Python chess engine** for move calculation, and a **custom CoreXY gantry system** with a servo-actuated magnet to physically move pieces from beneath the board. A traditional **chess clock** provides timing and serves as the trigger mechanism. when the human player hits their side of the clock, it signals the system to capture the board state, calculate its move, and execute.
+The board uses a **Raspberry Pi** for processing, an **overhead camera** for board state detection, a **Python chess engine** for move calculation, and a **custom CoreXY gantry system** with a servo-actuated magnet to physically move pieces from beneath the board. A traditional **chess clock** provides timing and serves as the trigger mechanism for the computer to take its turn.
 
 **Project Status**: Currently in active development (2 semesters in progress). Hardware assembly is largely complete, with motors operational. Software integration and computer vision pipeline are the next major milestones.
 
@@ -33,7 +33,7 @@ _Current hardware assembly with CoreXY gantry and electronics_
 
 ## Design Goals
 
-This isn't just about moving chess pieces, it's about creating an **authentic chess-playing experience** against a computer opponent that feels like playing against another person. The board maintains the tactile, focused nature of traditional chess while incorporating autonomous capabilities.
+This isn't just about moving chess pieces, it's about creating an **authentic chess-playing experience** against a computer opponent that feels like playing against another person. The board maintains the simple nature of traditional chess while incorporating autonomous capabilities.
 
 **Core Requirements**:
 
@@ -50,10 +50,10 @@ This isn't just about moving chess pieces, it's about creating an **authentic ch
 
 **Mechanical System**:
 
-- **CoreXY gantry** with 14"×14" working area (larger than 12"×12" board for edge access)
+- **CoreXY gantry** with 14"×15" working area (larger than 12"×12" board for edge access)
 - **2020 aluminum extrusion** frame (18"×19" outer dimensions)
-- **Belt-driven X-Y motion** with stepper motors
-- **Servo-actuated magnet** end effector (rotates 90° to engage/disengage pieces)
+- **Belt-driven X-Y motion** with 2 stepper motors
+- **Servo-actuated magnet** end effector (rotates 90° to engage/disengage magnet to pieces)
 
 **Electronics**:
 
@@ -61,7 +61,7 @@ This isn't just about moving chess pieces, it's about creating an **authentic ch
 - **Stepper motors**: NEMA 17 for X and Y axes
 - **Servo motor**: Magnet actuation
 - **Camera**: Raspberry Pi Camera Module (overhead mount)
-- **Chess clock**: Player input trigger (wired to GPIO)
+- **Chess clock**: Player input trigger and time keeping
 
 **Board Construction**:
 
@@ -69,7 +69,7 @@ This isn't just about moving chess pieces, it's about creating an **authentic ch
 - **Clear acrylic** outer casing (laser cut)
 - **3D printed PLA** brackets, mounts, slider rails, camera mount
 
-![CAD Model](/smart-chess-board/solidworks-cad.png)
+![CAD Model](/smart-chess-board/full-cad.jpg)
 _SolidWorks assembly showing complete mechanical design_
 
 ---
@@ -84,7 +84,7 @@ I selected a **CoreXY configuration** because both motors remain stationary (mou
 - **Better accuracy** (motors don't shift weight distribution during motion)
 - **Symmetrical belt routing** (equal precision in both axes)
 
-![Gantry System](/smart-chess-board/gantry-detail.jpg)
+![Gantry System](/smart-chess-board/gantry.jpg)
 _CoreXY belt routing with stationary motors_
 
 ### Custom 3D Printed Components
@@ -106,14 +106,17 @@ This is my **first major SolidWorks project**, and I've designed every custom co
 - **Structural rigidity**: Ensuring brackets don't flex under belt tension or acceleration loads
 - **Iterative refinement**: Multiple print iterations to achieve proper fits. This project taught me to design for manufacturability
 
+![3D Printed Pieces](/smart-chess-board/close-view.jpg)
+_3D printed chess pieces with print-in-place magnets_
+
 **Material Choices**:
 
 - **PLA for everything mechanical**: Fast iteration, easy to print, sufficient strength for this application
 - **Clear acrylic for casing**: Laser cut for clean edges, allows visibility into mechanism
 - **Wood for chessboard**: Traditional aesthetic, laser engraved for square definition
 
-![3D Printed Parts](/smart-chess-board/printed-components.jpg)
-_Sample of custom 3D printed brackets and mounts_
+![3D Printed Parts](/smart-chess-board/gantry-detail.jpg)
+_3D printed brackets and laser cut acrlyic sheets for main body housing_
 
 ### Learning SolidWorks
 
@@ -125,6 +128,9 @@ This project forced me to learn **advanced CAD modeling**:
 - **Parametric design**: Using variables so changes propagate through the model
 
 Creating a high-fidelity model that I could actually build from was a major milestone. The CAD model serves as the **single source of truth** for all dimensions, hole placements, and assembly procedures.
+
+![Solidworks CAD Details](/smart-chess-board/cad.jpg)
+_Detailed cad of all mechnical and electrical components_
 
 ---
 
@@ -179,6 +185,9 @@ def detect_board_state(current_frame, previous_frame):
 ```
 
 This approach is **much more robust** than trying to do shape-based piece recognition, which fails under varying lighting and viewing angles.
+
+![Raspberry Pi Camera View](/smart-chess-board/hardware-overview.jpg)
+_View of the chess board from the mounted Raspberry Pi camera_
 
 ---
 
@@ -283,9 +292,6 @@ I've created a preliminary **NVIDIA Isaac Sim** model of the chess board to:
 
 **Current Status**: Basic model exists but needs refinement. The digital twin will become more valuable once the vision and control systems are operational, allowing full simulation-to-reality validation.
 
-![Isaac Sim Model](/smart-chess-board/isaac-sim-basic.png)
-_Early-stage Isaac Sim digital twin (being refined)_
-
 ---
 
 ## Technical Challenges
@@ -339,7 +345,7 @@ Achieving **smooth motion** in the gantry required learning how to design for FD
 
 ## Current Status
 
-### ✅ Completed
+### Completed
 
 - **Mechanical design**: Full SolidWorks assembly with all custom parts modeled
 - **Hardware fabrication**: All 3D printed and laser-cut components manufactured
@@ -347,13 +353,13 @@ Achieving **smooth motion** in the gantry required learning how to design for FD
 - **Motors operational**: Stepper motors respond to commands (no coordinated motion yet)
 - **ROS environment**: Raspberry Pi configured with ROS installed
 
-### 🔨 In Progress
+### In Progress
 
 - **Electronics wiring**: Connecting all components to Raspberry Pi
 - **Motor calibration**: Tuning steps-per-mm for accurate positioning
 - **Camera alignment**: Mounting and aligning overhead camera for optimal view
 
-### 📅 Coming Next (Priority Order)
+### Coming Next (Priority Order)
 
 1. **Get gantry moving smoothly**: Write ROS nodes for coordinated X-Y motion
 2. **Test magnet pickup**: Verify servo-magnet system reliably grabs/releases pieces
@@ -419,7 +425,7 @@ Once the core system is operational, potential additions include:
 **Mechanical Design**: SolidWorks (first major project)  
 **Manufacturing**: FDM 3D Printing (PLA), Laser Cutting (Acrylic, Wood)  
 **Electronics**: Raspberry Pi 4, NEMA 17 Stepper Motors, Servo Motor  
-**Software**: Python, ROS (Noetic), OpenCV (planned), Python Chess Engine  
+**Software**: Python, ROS (Jammy), OpenCV (planned), Python Chess Engine  
 **Development Tools**: VS Code, Docker, Git  
 **Simulation**: NVIDIA Isaac Sim (early-stage digital twin)
 
