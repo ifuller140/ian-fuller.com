@@ -18,9 +18,6 @@ export default function Hero() {
               <h2 className="text-blue font-bold leading-none text-[3.2vw] xl:text-[2.57rem]">
                 Software Dev | Robotics Engineer
               </h2>
-              <p className="text-white-light text-[2vw] xl:text-xl mt-2">
-                Graduating May 2026 • Seeking Full-Time Roles
-              </p>
             </div>
             <Image
               src="/ian_fuller.jpg"

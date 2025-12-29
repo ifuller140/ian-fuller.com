@@ -11,7 +11,7 @@ tags:
   - Web Development
 links:
   - text: View on GitHub
-    href: https://github.com/ifuller140/train-tracker
+    href: https://github.com/JonahDelman/TrainTrack
 ---
 
 ## Project Overview

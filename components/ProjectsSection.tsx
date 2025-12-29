@@ -42,7 +42,7 @@ export default function ProjectsSection({ projects }: ProjectsSectionProps) {
   return (
     <Section
       id="projects"
-      className="bg-white-dark px-8 py-16 md:py-24 lg:py-32 xl:py-40"
+      className="bg-white px-8 py-16 md:py-24 lg:py-32 xl:py-40"
     >
       <div className="max-w-fit m-auto">
         <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-16">
