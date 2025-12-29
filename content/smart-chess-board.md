@@ -422,13 +422,13 @@ Once the core system is operational, potential additions include:
 
 ## Technologies Used
 
-**Mechanical Design**: SolidWorks (first major project).
-**Manufacturing**: FDM 3D Printing (PLA), Laser Cutting (Acrylic, Wood).
-**Electronics**: Raspberry Pi 4, NEMA 17 Stepper Motors, Servo Motor.
-**Software**: Python, ROS (Jammy), OpenCV (planned), Python Chess Engine.
-**Development Tools**: VS Code, Docker, Git.
-**Simulation**: NVIDIA Isaac Sim (early-stage digital twin)
+- **Mechanical Design**: SolidWorks (first major project).
+- **Manufacturing**: FDM 3D Printing (PLA), Laser Cutting (Acrylic, Wood).
+- **Electronics**: Raspberry Pi 4, NEMA 17 Stepper Motors, Servo Motors, Limit switches.
+- **Software**: Python, ROS (Jammy), OpenCV (planned), Python Chess Engine.
+- **Development Tools**: VS Code, Docker, Git.
+- **Simulation**: NVIDIA Isaac Sim (early-stage digital twin)
 
 ---
 
-_This project is ongoing and represents my most ambitious engineering effort to date. I am integrating mechanical, electrical, and software systems into one cohesive product. Follow the [GitHub repository](https://github.com/ifuller140/smart-chess-board) for updates as development continues._
+_This project is ongoing and represents my most ambitious engineering effort to date. I am integrating mechanical, electrical, and software systems into one cohesive product. Follow the [GitHub repository](https://github.com/ifuller140/smart_chess_board) for updates as development continues._
