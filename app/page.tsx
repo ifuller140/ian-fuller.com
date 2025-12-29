@@ -11,7 +11,7 @@ import { HiOutlineMail, HiOutlineUserAdd } from 'react-icons/hi';
 
 export default function Home() {
   const projects = getProjectMetadata();
-  const featuredProject = projects[0];
+  const featuredProject = projects[5];
 
   return (
     <>
@@ -31,25 +31,19 @@ export default function Home() {
           </Text>
           <Text>
             My work spans embedded systems, mobile development, simulation, and
-            reinforcement learning. I&apos;ve built everything from{' '}
+            reinforcement learning. I&apos;ve built many projects from{' '}
             <Link href="/project/smart-chess-board">chess-playing robots</Link>{' '}
-            to document management systems used by real businesses. What excites
-            me most is taking complex technical challenges and turning them into
-            working, tangible solutions.
+            to document management systems used by real businesses.
           </Text>
           <Text>
-            I&apos;m graduating in <strong>May 2026</strong> and
-            <strong> actively seeking full-time opportunities</strong> where I
-            can apply my cross-disciplinary skill set. Whether it&apos;s
-            robotics, software engineering, full-stack development, or something
-            in between; if you&apos;re building something ambitious, I&apos;d
-            love to <Link href="/#contact">connect</Link>.
+            What excites me most is taking complex technical challenges and
+            turning them into working, tangible solutions. If you&apos;re
+            building something ambitious, I&apos;d love to{' '}
+            <Link href="/#contact">connect</Link>.
           </Text>
         </Section>
 
-        <SkillsSection />
-
-        <Section className="bg-white px-8 py-16 md:py-24">
+        <Section className="bg-white-dark px-8 py-16 md:py-24">
           <div className="max-w-5xl mx-auto">
             <h2 className="font-extrabold text-2xl sm:text-3xl md:text-4xl text-center mb-12">
               Featured Project
@@ -59,6 +53,9 @@ export default function Home() {
         </Section>
 
         <ProjectsSection projects={projects} />
+
+        <SkillsSection />
+
         <Section
           id="contact"
           className="max-w-3xl m-auto flex flex-col gap-8 px-8 py-16 md:py-24 lg:py-32 xl:py-40"
@@ -69,12 +66,10 @@ export default function Home() {
             </Text>
           </div>
           <Text>
-            I&apos;m actively seeking{' '}
-            <strong>full-time software engineering and robotics roles</strong>{' '}
-            starting May 2026. Whether you&apos;re hiring, have an interesting
-            project collaboration in mind, or just want to discuss autonomous
-            systems, computer vision, or software development, I&apos;d love to
-            hear from you!
+            If you have an interesting project collaboration in mind, or just
+            want to discuss autonomous systems, computer vision, or software
+            development, I&apos;d love to hear from you. Feel free to reach out
+            via LinkedIn or email using the links below.
           </Text>
           <div className="max-w-fit m-auto">
             <div className="grid sm:grid-cols-2 gap-8">

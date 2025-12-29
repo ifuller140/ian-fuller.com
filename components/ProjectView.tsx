@@ -108,6 +108,12 @@ export default function ProjectView({ project }: ProjectViewProps) {
             image={project.data.image}
           />
 
+          {project.data.description && (
+            <div className="text-lg md:text-xl text-gray-dark">
+              <p>{project.data.description}</p>
+            </div>
+          )}
+
           <div className="flex flex-wrap gap-4">
             {project.data.links &&
               project.data.links.map((link: { text: string; href: string }) => (
@@ -116,12 +122,6 @@ export default function ProjectView({ project }: ProjectViewProps) {
                 </ProjectButton>
               ))}
           </div>
-
-          {project.data.description && (
-            <div className="text-lg md:text-xl text-gray-dark">
-              <p>{project.data.description}</p>
-            </div>
-          )}
 
           <article className="prose sm:prose-base md:prose-lg lg:prose-xl xl:prose-2xl prose-p:text-gray-dark prose-headings:text-gray prose-a:text-blue marker:text-gray-dark">
             {compiler(overviewContent, {
