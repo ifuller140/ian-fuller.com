@@ -564,9 +564,9 @@ The perception system I developed serves as the foundation for future Qubo itera
 ## Links
 
 📄 **[RoboSub Competition](https://robonation.org/programs/robosub/)**: Official competition website  
-🌐 **[Robotics @ Maryland](https://robotics.umd.edu/)**: Team website with full technical documentation
+🌐 **[Robotics @ Maryland](https://robotics-at-maryland.pages.umd.edu/projects/qubo/)**: Team website with full technical documentation
 
-![Team Photo](/qubo/team-photo.jpg)
+![Team Photo](/qubo/team-photo.png)
 _Robotics @ Maryland 2024 Team_
 
 ---

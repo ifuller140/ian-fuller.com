@@ -51,8 +51,7 @@ This isn't just about moving chess pieces, it's about creating an **authentic ch
 **Mechanical System**:
 
 - **CoreXY gantry** with 14"×15" working area (larger than 12"×12" board for edge access).
-- **2020 aluminum extrusion** frame (18"×19" outer dimensions).
-- **Belt-driven X-Y motion** with 2 stepper motors.
+- **Belt-driven X-Y motion** with 2 stepper motors in an H-Bot configuration.
 - **Servo-actuated magnet** end effector (rotates 90° to engage/disengage magnet to pieces).
 
 **Electronics**:
@@ -425,7 +424,7 @@ Once the core system is operational, potential additions include:
 - **Mechanical Design**: SolidWorks (first major project).
 - **Manufacturing**: FDM 3D Printing (PLA), Laser Cutting (Acrylic, Wood).
 - **Electronics**: Raspberry Pi 4, NEMA 17 Stepper Motors, Servo Motors, Limit switches.
-- **Software**: Python, ROS (Jammy), OpenCV (planned), Python Chess Engine.
+- **Software**: Python, ROS2 (Humble), OpenCV (planned), Python Chess Engine.
 - **Development Tools**: VS Code, Docker, Git.
 - **Simulation**: NVIDIA Isaac Sim (early-stage digital twin)
 

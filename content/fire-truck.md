@@ -53,7 +53,7 @@ Traditional approaches used fixed water nozzles or fans. I designed a **mechanic
 - **Conforms to varying candle heights** using suspended nodes
 - **Preserves the center candle** via a strategically placed hole
 
-![Platform Mechanism](/fire-truck/platform-mechanism.gif)
+![Platform Mechanism](/fire-truck/preview.gif)
 _Animation showing platform extension and retraction_
 
 **Why This Works**:
@@ -79,7 +79,7 @@ The robot uses an **Arduino Uno** as the central controller, coordinating:
 - 1× Servo motor (platform actuation)
 - Kill switches (safety requirement)
 
-![Electronics Diagram](/fire-truck/electronics-schematic.png)
+![Electronics Diagram](/fire-truck/electrical-schematic.png)
 _Complete electrical schematic showing all connections_
 
 **Power Management**:
@@ -261,9 +261,6 @@ void navigateToWaypoint(float targetX, float targetY) {
 
 **Tuning**: Adjusted `KP_TURN` gain through trial-and-error testing to minimize overshoot while maintaining responsiveness.
 
-![Navigation Test](/fire-truck/navigation-path.png)
-_Recorded path showing waypoint following accuracy_
-
 ---
 
 ## Software Architecture: State Machine
@@ -412,18 +409,12 @@ _Cross-section of suppression node showing sensor placement_
 
 ### Prototype Evolution
 
-**Version 1**: Fixed nozzles spraying water
-
-- ❌ Water damaged electronics
-- ❌ Required precise aiming
-- ❌ Refill time between runs
-
-**Version 2**: Fan-based air blast
+**Version 1**: Fan-based air blast
 
 - ❌ Insufficient force to extinguish candles
 - ❌ Blew out center candle (disqualification)
 
-**Version 3**: Mechanical smothering (final design)
+**Version 2**: Mechanical smothering (final design)
 
 - ✅ Reliable extinguishment
 - ✅ No consumables
@@ -435,13 +426,13 @@ _Cross-section of suppression node showing sensor placement_
 
 - **Topography Detection**: 15/15 correct (100%)
 - **Fire Count**: 14/15 correct (93%, 1 false positive)
-- **Extinguishment**: 15/15 successful (100%)
-- **Navigation**: Average positioning error <3 cm
+- **Extinguishment**: 12/15 successful (80%)
+- **Navigation**: Average positioning error <4 cm
 
 **Competition Performance**:
 
 - Mission completion time: **1 minute 47 seconds**
-- Placed **2nd** in class competition
+- Awarded **Best Mission Award**
 
 ![Competition Result](/fire-truck/competition-action.jpg)
 _Robot during competition run_
