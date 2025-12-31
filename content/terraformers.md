@@ -24,10 +24,6 @@ The **[University Rover Challenge (URC)](http://urc.marssociety.org/)** is the w
 
 As a member of **Robotics @ Maryland's Terraformers team**, I served as **Manufacturing Lead**, responsible for coordinating the design-for-manufacturing process and overseeing production of all 3D printed and machined components.
 
-![Terraformers Rover](/terraformers/rover-full-view.jpg)
-_Terraformers rover during field testing in Maryland_
-
----
 <!-- split -->
 
 ## My Role: Design for Manufacturing (DFM)
@@ -397,4 +393,4 @@ If I were to lead manufacturing again:
 
 ---
 
-_Manufacturing Lead, R @ M Terraformers Team, URC 2023_
+_Manufacturing Lead, Robotics@Maryland Terraformers, URC 2023_
